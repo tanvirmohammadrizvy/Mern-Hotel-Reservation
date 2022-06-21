@@ -1,6 +1,6 @@
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBed, faCar, faPlane, faTaxi } from '@fortawesome/free-solid-svg-icons'
+import { faBed, faCalendarDays, faCar, faPerson, faPlane, faTaxi } from '@fortawesome/free-solid-svg-icons'
 
 
 function Header() {
@@ -34,8 +34,20 @@ function Header() {
         more with a free Lamabooking account </p>
         <button className="headerBtn">Sign in / Register</button>
         <div className="headerSearch">
-            <div className="headerSearchItem">
+        <div className="headerSearchItem">
             <FontAwesomeIcon icon={faBed}  className="headerIcon" />
+            <input type="text" placeholder="Where are you going?" className='headerSearchInput'/>
+            </div>
+            <div className="headerSearchItem">
+            <FontAwesomeIcon icon={faCalendarDays}  className="headerIcon" />
+            <span className='headerSearchText'>date to date</span>
+            </div>
+            <div className="headerSearchItem">
+            <FontAwesomeIcon icon={faPerson}  className="headerIcon" />
+            <span className='headerSearchText'>2 adult 2 children 1 room</span>
+            </div>
+            <div className="headerSearchItem">
+            <button className="headerBtn">Search</button>
             </div>
         </div>
         </div>
