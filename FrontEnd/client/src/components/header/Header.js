@@ -5,7 +5,7 @@ import { faBed, faCalendarDays, faCar, faPerson, faPlane, faTaxi } from '@fortaw
 import { useState } from 'react';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-
+import { format } from 'date-fns';
 
 function Header() {
     const [date, setDate] = useState([
@@ -51,7 +51,7 @@ function Header() {
             </div>
             <div className="headerSearchItem">
             <FontAwesomeIcon icon={faCalendarDays}  className="headerIcon" />
-            <span className='headerSearchText'>date to date</span>
+            <span className='headerSearchText'>{`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
             <DateRange
             editableDateInputs={true}
             onChange={item => setDate([item.selection])}
